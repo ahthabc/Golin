@@ -593,4 +593,5 @@ var RuleDatas = []RuleData{
 	{"GeoServer", "body", `(?i)geoserver`},
 	{"xui", "body", `location.href = basePath + 'xui/'`},
 	{"九思OA", "body", "location.href.*?/jsoa/login.jsp"},
+	{"linglong", "body", "/css/app.3d466215.css"},
 }

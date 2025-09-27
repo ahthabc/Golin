@@ -9,5 +9,4 @@ body: >
   path=../&name=&FileName=/WEB-INF/web.xml
 expression:
   status: 200
-  body_any:
-    body_all: ["web-app"]
+  body_all: ["web-app"]

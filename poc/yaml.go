@@ -2,10 +2,12 @@ package poc
 
 import (
 	"embed"
-	"gopkg.in/yaml.v2"
+	"fmt"
 	"io/fs"
 	"strings"
 	"time"
+
+	"gopkg.in/yaml.v2"
 )
 
 //go:embed yaml-poc/*.yaml
@@ -50,7 +52,7 @@ func parseConfigs(dir string) ([]Config, error) {
 			var config Config
 			err = yaml.Unmarshal(data, &config)
 			if err != nil {
-				return nil, err
+				return nil, fmt.Errorf("解析 %s 失败: %w", entry.Name(), err)
 			}
 
 			configs = append(configs, config)

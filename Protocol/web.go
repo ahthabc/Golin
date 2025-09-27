@@ -135,6 +135,22 @@ func handleRequest(client *http.Client, info *WebInfo) ([]byte, error) {
 	info.server = resp.Header.Get("Server")
 	info.app = CheckApp(string(body), resp.Header, resp.Cookies(), info.server, info.icohash, info.cert.certIssuer) // 匹配组件
 
+	// 探测是不是nacos
+	if info.statuscode == 404 {
+		nacosURL := info.url
+		if !strings.HasSuffix(info.url, "/") {
+			nacosURL += "/"
+		}
+		nacosURL += "nacos"
+		rsp, err := http.Get(nacosURL)
+		if err == nil && rsp.StatusCode == 200 {
+			body, err := io.ReadAll(rsp.Body)
+			if err == nil && strings.Contains(string(body), "Nacos") {
+				info.app += "Nacos"
+			}
+		}
+	}
+
 	if os.Getenv("html") == "on" {
 		fmt.Printf("-----> URL: %s HTML正文:\n%s\n", info.url, string(body))
 		fmt.Printf("-----> Header:\n")
