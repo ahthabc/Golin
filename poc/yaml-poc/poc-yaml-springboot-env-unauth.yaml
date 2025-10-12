@@ -1,4 +1,5 @@
 name: poc-yaml-Springboot-env-unauth
+alwaysExecute: true
 description: "springboot未授权访问"
 method: GET
 path:

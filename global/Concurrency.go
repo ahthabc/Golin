@@ -7,9 +7,9 @@ import (
 
 // CalcConcurrency 动态计算并发数
 func CalcConcurrency(scancount int) int {
-	MinConcurrency := 10   // 最小并发数
-	MaxConcurrency := 1000 // 最大并发数
-	MaxForSmallJob := 30   // 小任务限制并发数
+	MinConcurrency := 10    // 最小并发数
+	MaxConcurrency := 10000 // 最大并发数
+	MaxForSmallJob := 30    // 小任务限制并发数
 
 	if scancount <= 0 {
 		return MinConcurrency

@@ -70,6 +70,7 @@
 | 47 |     Mongo-express     |  √   | 仅验证未授权访问 |
 | 48 |         Rsync         |  √   | 仅验证未授权访问 |
 | 49 |         xui面板         |  √   |          |
+| 50 | ApacheFlinkDashboard  |  √   | 仅验证未授权访问 |
 
 
 

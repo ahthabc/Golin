@@ -1,4 +1,5 @@
 name: poc-yaml-Node-Exporter-unauth
+alwaysExecute: true
 description: "metrics接口信息泄露"
 method: GET
 path:

@@ -1,0 +1,10 @@
+name: poc-yaml-ApacheFlinkDashboard-unauth
+alwaysExecute: true
+description: "未授权访问"
+method: GET
+path:
+  - /#/overview
+expression:
+  status: 200
+  body_all:
+    - "Apache Flink Web Dashboard"

@@ -594,4 +594,5 @@ var RuleDatas = []RuleData{
 	{"xui", "body", `location.href = basePath + 'xui/'`},
 	{"九思OA", "body", "location.href.*?/jsoa/login.jsp"},
 	{"linglong", "body", "/css/app.3d466215.css"},
+	{"ApacheFlinkDashboard", "body", "<title>Apache Flink Web Dashboard</title>"},
 }

@@ -1,4 +1,5 @@
 name: poc-yaml-go-pprof-leak
+alwaysExecute: true
 description: "Go语言pprof包中的api信息泄露"
 method: GET
 path:
@@ -10,3 +11,5 @@ expression:
     - "/debug/pprof/"
     - "available"
     - "goroutine"
+    - "go_gc"
+    - "go_memstats"

@@ -1,4 +1,5 @@
 name: poc-yaml-SpringActuatorHeapdump
+alwaysExecute: true
 description: "可下载内存文件,文件中会包含大量敏感信息"
 method: HEAD
 path:

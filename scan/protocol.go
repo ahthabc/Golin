@@ -93,6 +93,8 @@ func parseProtocol(conn net.Conn, host, port string, Poc bool) string {
 func defaultPort(port string) string {
 	defMap := map[string]string{
 		"3306": "数据库|MySQL",
+		"6379": "数据库|Redis",
+		"22":   "SSH",
 		"23":   "Telnet",
 		"21":   "FTP",
 		//"80":    "WEB应用",

@@ -1,0 +1,10 @@
+name: poc-yaml-hadoop-leak
+alwaysExecute: true
+description: "hadoop未授权"
+method: GET
+path:
+  - /node
+expression:
+  status: 200
+  body_any:
+    - "hadoop"
